@@ -1,0 +1,179 @@
+
+
+.app-li-current
+{
+    color:#3783F7;
+    border-bottom:2px #3783F7 solid
+}
+
+.app-button-primary
+{
+    border-color:#3783F7;
+    background-color: #3783F7;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0.5,#3783F7),to(#3783F7));
+}
+
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+
+#my-popup {
+    width: 1200px;
+    height: 700px;
+    left: 50%;
+    top: 50%;
+    margin-left: -600px;
+    margin-top: -350px;
+}
+
+
+#coverimagediv{
+    width: 600px;
+    height: auto;
+    min-height: 200px;
+    max-height: 550px;
+
+}
+
+#coverimagediv img{
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 550px;
+    height: auto;
+}
+.resizer{
+    overflow: hidden;
+}
+.resizer.have-img button.ok{
+    display: inline-block;
+}
+.resizer.have-img .inner {
+    display: block;
+}
+.inner{
+    width: 100%;
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
+    display: none;
+}
+.yjk-auto-lineheight li{
+    line-height: inherit;
+}
+
+.frames{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+    cursor: move;
+    outline: rgba(0, 0, 0, 0.6) solid 10000px;
+}
+button.ok{
+    float:right;
+    margin-left: 5px;
+    display: none;
+}
+canvas{
+    max-width: 100%;
+    margin:auto;
+    display: block;
+}
+.ui-tab-nav {
+    height: 30px;
+}
+.ui-tab-nav li {
+    height: 30px;
+    line-height: 30px;
+}
+.ui-tab-content {
+    text-align: left;
+}
+.ui-list {
+    padding: 1em;
+    width: auto;
+}
+.ui-list-pure {
+    list-style-type: disc;
+    padding-bottom: 70px;
+}
+.ui-list-pure>li {
+    padding-bottom: 0;
+    list-style: inherit;
+}
+.list-content {
+    list-style-type: disc;
+
+}
+.list-content li {
+    list-style-type: disc;
+    margin: 10px 18px;
+    color: grey;
+}
+.list-content li h4 {
+    color: #565656;
+}
+.list-content li p {
+    padding-top: 5px;
+}
+.ui-tab-content h1 {
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.ui-tab-content h1 span {
+    color: #3783F7;
+}
+.error-message {
+    color: red;
+    display: none;
+}
+.apply-page .apply-finished-container {
+    display: none;
+    background-color: white;
+}
+.apply-finished-container {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.apply-finished-container h1, .apply-finished-container h2 {
+    margin: 1em auto;
+}
+.header-image {
+    max-width: 100px;
+    height: auto;
+    padding: 60px;
+    padding-bottom: 0;
+}
+.ui-border-t {
+    background-image: none;
+}

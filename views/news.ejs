@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>新闻 ｜ </title>
+	<link rel="stylesheet" href="/stylesheets/news.css">
+	<script src="/javascripts/jquery.js"></script>
+</head>
+<body>
+<div class="am-margin ng-scope">
+	<article class="am-article">
+		<div class="am-article-hd">
+			<h1 class="am-article-title ng-binding"></h1>
+			<p class="am-article-meta ng-binding"></p>
+			<img class="am-margin-bottom am-img-thumbnail" src="">
+		</div>
+
+
+		<div class="am-article-bd">
+			<p class="am-article-lead ng-binding">eee</p>
+			<div ng-bind-html="contentHtml" class="ng-binding"></div>
+		</div>
+	</article>
+
+	<script src="https://leancloud.cn/scripts/lib/av-0.5.1.min.js"></script>
+	<script>
+		var appId = "355tfbzmh11zoehawt3nmxdkyjbk1uiizbso62oiraaq6rtz",
+				appKey = "3nxmy6eugpkpb9tg75txav8h3wlcy7330mj3rws0w5jtm445";
+		AV.initialize(appId, appKey);
+		var News = AV.Object.extend('News');
+		var query = new AV.Query(News);
+		var idString = window.location.search;
+		var newsId = idString.substring(idString.indexOf('?id=') + 4, idString.length);
+		query.equalTo('objectId', newsId);
+		query.find().then(function(news) {
+			if (news.length) {
+				$('title').append(news[0].get('title'));
+				$('.am-article-title').append(news[0].get('title'));
+				$('.am-article-meta').append(news[0].updatedAt.toLocaleDateString());
+				$('.am-margin-bottom').attr('src', news[0].get('coverImage').url())
+				$('.am-article-lead').append(news[0].get('content'));
+			}
+
+		}, function(err) {
+
+		})
+
+
+	</script>
+</div>
+</body>
+</html>
